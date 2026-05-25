@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ConvExt.HtmlToMarkdown/ConvExt.HtmlToMarkdown.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="ShortDisplayTitle" xml:space="preserve">
+    <value>HTML to Markdown</value>
+  </data>
+  <data name="LongDisplayTitle" xml:space="preserve">
+    <value>HTML to Markdown</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Convert HTML markup to Markdown. Supports GitHub-Flavored Markdown tables, smart link handling, code blocks, and configurable unknown-tag policies.</value>
+  </data>
+  <data name="AccessibleName" xml:space="preserve">
+    <value>HTML to Markdown converter</value>
+  </data>
+
+  <data name="ConfigurationTitle" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+
+  <data name="Input" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
+
+  <data name="GithubFlavoredTitle" xml:space="preserve">
+    <value>GitHub-Flavored Markdown</value>
+  </data>
+  <data name="GithubFlavoredDescription" xml:space="preserve">
+    <value>Emit GFM tables, strikethrough, and other GitHub-specific syntax.</value>
+  </data>
+
+  <data name="SmartHrefTitle" xml:space="preserve">
+    <value>Smart link handling</value>
+  </data>
+  <data name="SmartHrefDescription" xml:space="preserve">
+    <value>Detect raw URLs in link text and skip wrapping them in Markdown link syntax.</value>
+  </data>
+
+  <data name="RemoveCommentsTitle" xml:space="preserve">
+    <value>Remove HTML comments</value>
+  </data>
+  <data name="RemoveCommentsDescription" xml:space="preserve">
+    <value>Drop &lt;!-- comments --&gt; from the output instead of preserving them.</value>
+  </data>
+
+  <data name="UnknownTagsTitle" xml:space="preserve">
+    <value>Unknown tags policy</value>
+  </data>
+  <data name="UnknownTagsDescription" xml:space="preserve">
+    <value>How to handle HTML tags the converter does not know.</value>
+  </data>
+  <data name="UnknownTagsPassThrough" xml:space="preserve">
+    <value>Pass through (keep as HTML)</value>
+  </data>
+  <data name="UnknownTagsDrop" xml:space="preserve">
+    <value>Drop (remove tag and content)</value>
+  </data>
+  <data name="UnknownTagsBypass" xml:space="preserve">
+    <value>Bypass (remove tag, keep content)</value>
+  </data>
+  <data name="UnknownTagsRaise" xml:space="preserve">
+    <value>Raise (surface an error)</value>
+  </data>
+
+  <data name="BulletCharTitle" xml:space="preserve">
+    <value>Bullet character</value>
+  </data>
+  <data name="BulletCharDescription" xml:space="preserve">
+    <value>Character used to mark unordered list items.</value>
+  </data>
+  <data name="BulletDash" xml:space="preserve">
+    <value>-  (dash)</value>
+  </data>
+  <data name="BulletStar" xml:space="preserve">
+    <value>*  (asterisk)</value>
+  </data>
+  <data name="BulletPlus" xml:space="preserve">
+    <value>+  (plus)</value>
+  </data>
+
+  <data name="DefaultCodeLanguageTitle" xml:space="preserve">
+    <value>Default code-block language</value>
+  </data>
+  <data name="DefaultCodeLanguageDescription" xml:space="preserve">
+    <value>Fenced-code-block language to use when the source &lt;code&gt; element has no language class. Leave empty for none.</value>
+  </data>
+
+  <data name="TableWithoutHeaderTitle" xml:space="preserve">
+    <value>Table without header row</value>
+  </data>
+  <data name="TableWithoutHeaderDescription" xml:space="preserve">
+    <value>How to handle &lt;table&gt; elements that do not start with a header row.</value>
+  </data>
+  <data name="TableWithoutHeaderDefault" xml:space="preserve">
+    <value>Default (use first row as header)</value>
+  </data>
+  <data name="TableWithoutHeaderEmptyRow" xml:space="preserve">
+    <value>Insert an empty header row</value>
+  </data>
+
+  <data name="ErrorBarTitle" xml:space="preserve">
+    <value>Conversion failed</value>
+  </data>
+</root>

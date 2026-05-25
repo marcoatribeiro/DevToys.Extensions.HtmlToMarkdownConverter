@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <RootNamespace>ConvExt.HtmlToMarkdown</RootNamespace>
+    <AssemblyName>ConvExt.HtmlToMarkdown</AssemblyName>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <GenerateRuntimeConfigurationFiles>false</GenerateRuntimeConfigurationFiles>
+
+    <!-- NuGet package metadata -->
+    <PackageId>ConvExt.HtmlToMarkdown</PackageId>
+    <Version>1.0.0-pre.0</Version>
+    <Authors>mribeiro@impel.ai</Authors>
+    <Title>HTML to Markdown</Title>
+    <Description>DevToys extension: convert HTML to Markdown with configurable options (GFM, smart links, unknown-tag policy, code blocks). Backed by ReverseMarkdown.</Description>
+    <PackageTags>devtoys-app;devtoys;devtoys-extension;html;markdown;converter</PackageTags>
+    <PackageProjectUrl>https://github.com/marcoatribeiro/DevToys.Extensions.HtmlToMarkdownConverter</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/marcoatribeiro/DevToys.Extensions.HtmlToMarkdownConverter</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <!-- DevToys plugin loader does not resolve transitive NuGet dependencies,
+         so we bundle ReverseMarkdown (and its HtmlAgilityPack dep) into lib/. -->
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackBundledDependencies</TargetsForTfmSpecificContentInPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevToys.Api" Version="2.0.10-preview" />
+    <PackageReference Include="ReverseMarkdown" Version="5.3.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <Target Name="PackBundledDependencies">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(OutputPath)ReverseMarkdown.dll" PackagePath="lib/$(TargetFramework)/" />
+      <TfmSpecificPackageFile Include="$(OutputPath)HtmlAgilityPack.dll" PackagePath="lib/$(TargetFramework)/" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Strings\HtmlToMarkdown.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HtmlToMarkdown.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Update="Strings\HtmlToMarkdown.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HtmlToMarkdown.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
